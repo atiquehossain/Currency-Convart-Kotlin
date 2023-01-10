@@ -16,10 +16,9 @@ class MainActivity : AppCompatActivity() {
         "USD" to R.drawable.usa,
         "Pound" to R.drawable.uk,
 
-    )
-    lateinit var binding : ActivityMainBinding
+        )
 
-
+    lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,23 +32,32 @@ class MainActivity : AppCompatActivity() {
         initUI()
     }
 
-    private fun initUI(){
+    private fun initUI() {
 
-         // Set a listener on the spinner to update the flag image when a different country is selected
-         binding.spinnerOne.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                 binding.flagImageViewOne.setImageResource(countries[position].second)
-             }
+        binding.spinnerOne.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                binding.flagImageViewOne.setImageResource(countries[position].second)
+            }
 
-             override fun onNothingSelected(parent: AdapterView<*>?) {}
-         }
-         // Set a listener on the spinner to update the flag image when a different country is selected
-         binding.spinnerTwo.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                 binding.flagImageViewTwo.setImageResource(countries[position].second)
-             }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
 
-             override fun onNothingSelected(parent: AdapterView<*>?) {}
-         }
+        binding.spinnerTwo.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(
+                parent: AdapterView<*>?,
+                view: View?,
+                position: Int,
+                id: Long
+            ) {
+                binding.flagImageViewTwo.setImageResource(countries[position].second)
+            }
+
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
     }
 }
