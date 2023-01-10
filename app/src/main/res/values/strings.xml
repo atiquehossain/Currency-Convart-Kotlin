@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Currency-Convart</string>
+    <string name="hint_number">Input Number</string>
+
+</resources>
