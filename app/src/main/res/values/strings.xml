@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Currency-Convart</string>
     <string name="hint_number">Input Number</string>
+    <string name="zero">0000</string>
+    <string name="result">Result</string>
+    <string name="convart">Convart</string>
 
 </resources>
